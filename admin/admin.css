@@ -1,0 +1,58 @@
+﻿:root {
+  --admin-bg: #f6f3eb;
+  --admin-surface: #ffffff;
+  --admin-navy: #0d2446;
+  --admin-gold: #c8a04a;
+  --admin-text: #1f1f1f;
+  --admin-line: #e4dfd2;
+}
+
+html,
+body {
+  background: var(--admin-bg);
+  color: var(--admin-text);
+}
+
+/* Decap root wrappers (works across v2/v3 with either selector) */
+#nc-root,
+[data-slate-editor="true"],
+[data-testid="app-root"] {
+  color: var(--admin-text);
+}
+
+/* Generic control polish for Decap form widgets */
+input,
+select,
+textarea,
+button {
+  border-radius: 10px;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid var(--admin-line);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--admin-gold);
+  box-shadow: 0 0 0 3px rgba(200, 160, 74, 0.2);
+}
+
+button {
+  border: 1px solid transparent;
+}
+
+button:hover {
+  filter: saturate(1.03);
+}
+
+/* Keep primary actions readable if theme classes are absent */
+button[class*="primary"],
+button[class*="Primary"] {
+  background: var(--admin-navy);
+  color: #fff;
+}

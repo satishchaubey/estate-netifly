@@ -1,0 +1,25 @@
+﻿ADMIN SETUP (Netlify + Decap CMS)
+
+Production (Netlify Identity)
+1) Netlify -> Site settings -> Identity -> Enable Identity
+2) Identity -> Registration -> Invite only (recommended)
+3) Identity -> Services -> Enable Git Gateway
+4) Redeploy
+
+Admin URL (production)
+- https://bayan-properties.netlify.app/admin
+
+Local Admin (works when Netlify site is paused)
+1) Open terminal A in project root and run:
+   npx --yes netlify-cms-proxy-server
+2) Open terminal B in project root and run a static server:
+   npx --yes http-server . -p 8080
+3) Open in browser:
+   http://localhost:8080/admin/
+4) On login screen, use the local backend option if prompted (no Netlify login needed in local mode).
+
+Notes
+- admin/config.yml includes: local_backend: true
+- Content file edited by CMS: content/listings.json
+- Uploaded images: assets/img/uploads/
+- If port 8081 is busy, stop the process using it, then restart the proxy server.

@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Bayan Properties — Agence immobilière | Grand Casablanca</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png"/>
+  <meta name="description" content="Bayan Properties — agence immobilière moderne et transparente à Casablanca, Dar Bouazza, Bouskoura et Benslimane. Location et vente. Clients qualifiés."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <script>
+    // Remplace par ton numéro WhatsApp (format international, sans +)
+    window.BAYAN_WHATSAPP = "212607073288";
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="index.html">
+          <img src="assets/img/logo-header.png" alt="Bayan Properties" style="height:44px;width:auto;border-radius:10px">
+          <div class="brand-name">
+            <strong>Bayan Properties</strong>
+            <span>Real Estate</span>
+          </div>
+        </a>
+        <nav class="menu">
+          <a href="index.html">Accueil</a>
+          <a href="listings.html">Biens</a>
+          <a href="services.html">Services</a>
+          <a href="proprietaires.html">Propriétaires</a>
+          <a href="zones.html">Zones</a>
+          <a href="about.html">À propos</a>
+          <a href="contact.html">Contact</a>
+          <a class="btn btn-primary" data-wa-global="1" href="#">WhatsApp</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">☰</button>
+        </div>
+      </div>
+    </div>
+      <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-label="Menu">
+        <a href="index.html">Accueil <span>›</span></a>
+        <a href="listings.html">Biens <span>›</span></a>
+        <a href="services.html">Services <span>›</span></a>
+        <a href="proprietaires.html">Propriétaires <span>›</span></a>
+        <a href="zones.html">Zones <span>›</span></a>
+        <a href="about.html">À propos <span>›</span></a>
+        <a href="contact.html">Contact <span>›</span></a>
+        <div class="cta">
+          <a class="btn btn-primary" data-wa-global="1" href="#">WhatsApp — Visite</a>
+          <a class="btn btn-secondary" href="listings.html">Découvrir les biens</a>
+        </div>
+      </div>
+  </header>
+
+  <main>
+
+    <section class="section" data-banner="1" style="padding-top:26px">
+      <div class="container">
+        <div class="card" style="padding:0;overflow:hidden;border-radius:22px">
+          <div style="aspect-ratio:16/6;background-image:url('assets/img/hero.jpg');background-size:cover;background-position:center"></div>
+          <div style="padding:18px">
+            <h2 style="margin:0">Contact</h2>
+            <p class="sub" style="margin:6px 0 0">Une expérience premium — claire, moderne et orientée résultats.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="sub">Décrivez votre besoin en quelques lignes. Nous répondons rapidement, avec des options pertinentes.</p>
+
+        <div class="row" style="align-items:flex-start">
+          <div class="card" style="flex:1.3;min-width:320px;border-radius:22px">
+            <h3>Votre besoin</h3>
+            <form onsubmit="event.preventDefault(); alert('Formulaire démo — connecte-le à Wix / email / CRM.');">
+              <div class="row">
+                <div style="flex:1;min-width:220px" class="field">
+                  <label>Nom</label>
+                  <input placeholder="Votre nom" required>
+                </div>
+                <div style="flex:1;min-width:220px" class="field">
+                  <label>Téléphone</label>
+                  <input placeholder="+212..." required>
+                </div>
+              </div>
+
+              <div class="row">
+                <div style="flex:1;min-width:220px" class="field">
+                  <label>Opération</label>
+                  <select>
+                    <option>Location</option>
+                    <option>Vente</option>
+                  </select>
+                </div>
+                <div style="flex:1;min-width:220px" class="field">
+                  <label>Zone</label>
+                  <select>
+                    <option>Casablanca</option>
+                    <option>Dar Bouazza</option>
+                    <option>Bouskoura</option>
+                    <option>Benslimane</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <div style="flex:1;min-width:220px" class="field">
+                  <label>Meublé</label>
+                  <select>
+                    <option>Indifférent</option>
+                    <option>Oui</option>
+                    <option>Non</option>
+                  </select>
+                </div>
+                <div style="flex:1;min-width:220px" class="field">
+                  <label>Charges incluses</label>
+                  <select>
+                    <option>Indifférent</option>
+                    <option>Oui</option>
+                    <option>Non</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label>Message</label>
+                <input placeholder="Budget, type de bien, critères..." required>
+              </div>
+
+              <div class="row" style="margin-top:10px;gap:12px">
+                <button class="btn btn-primary" type="submit">Envoyer</button>
+                <a class="btn btn-secondary" data-wa-global="1" href="#">WhatsApp — Réponse rapide</a>
+              </div>
+            </form>
+          </div>
+
+          <div class="card" style="flex:1;min-width:280px;border-radius:22px">
+            <h3>Coordonnées</h3>
+            <p style="margin:0;line-height:1.8">
+              WhatsApp : <b>+212 607 073 288</b><br>
+              Email : <b>contact.bayanproperties@gmail.com</b><br>
+              Disponibilité : <b>sur rendez-vous</b>
+            </p>
+            <hr style="border:none;border-top:1px solid var(--line);margin:14px 0">
+            <h3>Rendez-vous</h3>
+            <p style="margin:0;line-height:1.7">Clique sur WhatsApp et décris ton besoin (zone, budget, meublé, charges). On te propose une visite rapidement.</p>
+            <div style="margin-top:12px">
+              <a class="btn btn-primary" data-wa-global="1" href="#">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <a class="wa-float" data-wa-global="1" href="#" aria-label="WhatsApp Bayan Properties">
+    <span class="wa-icon">✆</span>
+    WhatsApp
+  </a>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="cols">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+            <img src="assets/img/logo-footer.png" alt="Bayan Properties" style="height:34px;width:auto;border-radius:10px">
+            <div>
+              <div style="font-weight:800;color:var(--navy)">Bayan Properties</div>
+              <div class="small">Grand Casablanca • Dar Bouazza • Bouskoura • Benslimane</div>
+            </div>
+          </div>
+          <div class="small">Agence immobilière moderne, transparente et orientée clients qualifiés.</div>
+        </div>
+        <div>
+          <div style="font-weight:700;color:var(--navy);margin-bottom:8px">Liens</div>
+          <div class="small"><a href="listings.html">Biens</a> • <a href="services.html">Services</a>
+          <a href="proprietaires.html">Propriétaires</a> • <a href="zones.html">Zones</a></div>
+          <div class="small" style="margin-top:6px"><a href="contact.html">Contact</a> • Mentions légales • Politique de confidentialité</div>
+        </div>
+        <div>
+          <div style="font-weight:700;color:var(--navy);margin-bottom:8px">Contact</div>
+          <div class="small">WhatsApp : +212 607 073 288</div>
+          <div class="small">Email : contact.bayanproperties@gmail.com</div>
+          <div class="small">Sur rendez-vous</div>
+          <div class="small">Instagram : <a href="https://www.instagram.com/bayan.properties/" target="_blank" rel="noopener">@bayan.properties</a></div>
+        </div>
+      </div>
+      <div class="small" style="margin-top:14px">© <span id="y"></span> Bayan Properties. Tous droits réservés.</div>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+﻿backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+locale: "fr"
+logo_url: "/assets/img/logo.png"
+
+media_folder: "assets/img/uploads"
+public_folder: "/assets/img/uploads"
+
+publish_mode: editorial_workflow
+
+collections:
+  - label: "Biens"
+    name: "biens"
+    files:
+      - label: "Liste des biens"
+        name: "liste_biens"
+        file: "content/listings.json"
+        format: "json"
+        fields:
+          - label: "Biens"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.id}} - {{fields.title}}"
+            fields:
+              - { label: "Reference (ID)", name: "id", widget: "string" }
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Zone", name: "zone", widget: "select", options: ["Casablanca","Dar Bouazza","Bouskoura","Benslimane"] }
+              - { label: "Type", name: "type", widget: "select", options: ["Appartement","Villa","Studio","Terrain","Bureau"] }
+              - { label: "Operation", name: "operation", widget: "select", options: ["Location","Vente"] }
+              - { label: "Prix (MAD)", name: "price_mad", widget: "number", value_type: "int", min: 0 }
+              - { label: "Meuble", name: "meuble", widget: "boolean", default: false }
+              - { label: "Charges incluses", name: "charges_incluses", widget: "boolean", default: false }
+              - { label: "Disponible (Dispo)", name: "dispo", widget: "boolean", default: true }
+              - { label: "Chambres", name: "bedrooms", widget: "number", value_type: "int", min: 0, default: 0 }
+              - { label: "Salles de bain", name: "bathrooms", widget: "number", value_type: "int", min: 0, default: 0 }
+              - { label: "Surface (m2)", name: "surface_m2", widget: "number", value_type: "int", min: 0, default: 0 }
+              - label: "Images"
+                name: "images"
+                widget: "list"
+                field: { label: "Image", name: "image", widget: "image" }
+              - label: "Points forts"
+                name: "highlights"
+                widget: "list"
+                required: false
+                field: { label: "Point", name: "point", widget: "string" }
+
